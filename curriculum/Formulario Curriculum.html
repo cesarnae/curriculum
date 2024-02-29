@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Curriculum</title>
+</head>
+<body style="background-color: grey;">
+    <h2><u>Formulario Curriculum</u></h2>
+    <form>
+    <fieldset>
+        <legend> Datos personales </legend>
+        Nombre: <input type="text" id="nombre" name="nombre">
+        <br>
+       Apellidos: <input type="text" id="apellidos" name="apellidos">
+        <br>
+        Correo electrónico: <input type="email" id="email" name="email">
+        <br>
+        Mensaje:
+        <br>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu comentario..."></textarea>
+        <br>
+        <button type="submit" value="" onclick="mostrarDatos()">Enviar Formulario</button>
+    </form>
+</fieldset>
+    <script>
+        function mostrarDatos() {
+            var nombre = document.getElementById('nombre').value;
+            var apellidos = document.getElementById('apellidos').value;
+            var email = document.getElementById('email').value;
+            var mensaje = document.getElementById('mensaje').value;
+
+            var mensajePopup = "Nombre: " + nombre + "\nApellidos: " + apellidos + "\nCorreo electrónico: " + email + "\nMensaje: " + mensaje;
+
+            alert(mensajePopup);
+        }
+    </script>
+</body>
+</html>
